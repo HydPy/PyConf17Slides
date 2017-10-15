@@ -15,7 +15,7 @@ Presentation slides for all keynote speakers, general sessions and workshops pre
 * [Recreational Programming](https://speakerdeck.com/anandology/recreational-programming) - Anand Chitipothu
 * [My Journey to RDO Community](https://www.slideshare.net/ChandanKumar612/my-journey-to-rdo-community) - Chandan Kumar
 * [IoT Meets Serverless](http://dudewho.codes/assets/pdfs/iot_meets_serverless.pdf) - Narendran
-* [The Journey to Jarvis v2.0 via Stephanie: Building your very own simple AI](https://docs.google.com/presentation/d/e/2PACX-1vRo56UUB8Z6TLIDEek7G06uMMm9JoBxLXEeexNP4ybgPt8bRRsWumnpETSJwCY64RAKQZ5StP9wRr6i/pub?start=false&loop=false&delayms=3000&slide=id.gc6f73a04f_0_0) - Ujjwal Gupta
+* [The Journey to Jarvis v2.0 via Stephanie: Building your very own simple AI](https://docs.google.com/presentation/d/e/2PACX-1vRtpUkuXLgfq-0UJ_5yljrlRztJ0SRKNLCK0CQ4TdKiCnqFpzJYWwC0RtcAOZjZ2gkWvXEbo18_kly3/pub?start=false&loop=false&delayms=3000) - Ujjwal Gupta
 * [A Lazy Programmers guide to Web Scraping](https://docs.google.com/presentation/d/1vH8iglKUqzzydG0NK_lW0TtghFxu6U29KHrOGlHNmEk/pub?start=false&loop=false&delayms=5000&slide=id.p) - Pradhvan Bisht
 * [Airflow: To Manage Data Pipelines](https://userimack.github.io/airflow_slides/airflow_slides/#/) - Mahendra Yadav
 
