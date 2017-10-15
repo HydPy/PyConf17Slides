@@ -4,7 +4,8 @@ Presentation slides for all keynote speakers, general sessions and workshops pre
 ### Workshops
 * Workshop 1 - Embedded Linux Device Interfacing with Python - Vijay Kumar (TBA)
 * Workshop 2 - [Building an AI based Chatbot](https://docs.google.com/presentation/d/1FQ--Tn-Px6I3ygsgPtsWErs1-EFux7DqAyijCgLzu3U/edit?usp=sharing) - Dorai Thodla
-* Workshop 2 - Time Series Analysis in Python - Yves Hilpisch (TBA)
+* Workshop 2 - [Time Series Analysis in Python](http://hilpisch.com/hydpy_workshop.pdf) - Yves Hilpisch
+
 ### Keynotes
 * [Keynote 1](https://www.slideshare.net/gramener/dont-repeat-yourself-and-automated-code-reviews) - Anand S
 * [Keynote 2](http://hilpisch.com/hydpy_keynote.pdf) - Yves Hilpisch
