@@ -1,0 +1,22 @@
+
+footer.azri-logo {
+  position: absolute;
+  bottom: 2em;
+  left: 3em;
+  width: 100%;
+}
+footer.azri-logo img {
+  width: 100px;
+}
+footer.custom-logo {
+  position: absolute;
+  bottom: 2em;
+  right: 3em;
+}
+footer.custom-logo img {
+  height:60px;
+//  width: 100px;
+}
+.reveal .controls {
+  display:none;
+}
