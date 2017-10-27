@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Slides</title>
+
+        <meta name="description" content="Airflow: To Manage Data Pipelines< ">
+		<meta name="author" content="Mahendra Yadav @userimack">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Airflow</h1>
+                    <h3>To Manage Data Pipelines</h3>
+					<p>
+ 					        <small>Presented by &nbsp;<a href="https://linkedin.com/in/userimack">Mahendra Yadav</a></small>
+					</p>
+	<p>
+ 					        <a href="http://azrisolutions.com"> Azri Solutions </a>
+					</p>
+				</section>
+				<section>
+                    <img alt="" src="./assets/dp.jpg"/>
+					<h2>Mahendra Yadav</h2>
+                    <h4>Data Engineer at Azri Solutions</h4>
+					<ul>
+						<!-- <li></li> -->
+                        <li>Twitter: <a href="https://www.twitter.com/@userimack/" target=_blank>https://www.twitter.com/@userimack/</a></li>
+                        <li>Github: <a href="http://github.com/userimack/" target=_blank>http://github.com/userimack/</a></li>
+                        <li>Blog: <a href="https://userimack.wordpress.com/" target=_blank>https://userimack.wordpress.com/</a></li>
+					</ul>
+					<aside class="notes">
+						 speaker notes window (hit 's' on your keyboard).
+					</aside>
+
+				</section>
+				<section>
+					<h2>Introduction to Airflow</h2>
+                    <h4>Airflow is a platform to programmatically author, schedule and monitor data pipelines.</h4>
+
+				</section>
+
+                <section>
+                    <h2>Data Pipeline</h2>
+                    <img alt="" src="./assets/pipeline.jpg"/>
+                </section>
+
+				<section>
+					<h2>Existing challenges</h2>
+                    <div><img alt="cron image"  src="./assets/cron_image.png" align="top"/></div>
+                    <div>
+					<ul>
+                       <li>Hard to debug and maintain.</li>
+                       <li>Lack of stats</li>
+                       <li>Logging</li>
+                       <li>Retrying</li>
+					</ul>
+                    </div>
+				</section>
+
+				<section>
+                    <h2>Main Advantages</h2>
+				</section>
+
+                <section>
+                    <h3>Stats</h3>
+                    <img alt="stats" src="./assets/stats.png"/>
+                </section>
+
+                <section>
+                    <h3>Logs</h3>
+                    <img alt="stats" src="./assets/logging.png" />
+                </section>
+                <section>
+                    <h3>Handle task failures</h3>
+                    <img alt="stats" src="./assets/retry_message.png" />
+                    <img alt="stats" src="./assets/retry_tree_view.png" />
+                </section>
+                <section>
+                    <h3>Alert on failures</h3>
+                    <img alt="stats" src="./assets/failed_notification.png" />
+                </section>
+
+                <section>
+                    <h3>Monitoring of tasks over time</h3>
+                    <img alt="stats" src="./assets/retry_tree_view.png" />
+                </section>
+
+				<section>
+                    <h3>Pipelines written in Python - Code View 1</h3>
+                    <div>
+                        <img alt=""  src="./assets/dag_code_1.png" align='middle' height='565'>
+                    </div>
+
+				</section>
+				<section>
+                    <h3>Pipelines written in Python - Code View 2</h3>
+                    <div>
+                        <img alt=""  src="./assets/dag_code_2.png" align='middle' height='565'>
+                    </div>
+				</section>
+
+                <section>
+                    <h2>Basic Concepts</h2>
+                </section>
+
+				<section>
+                    <h3>Workflow as DAG</h3>
+                    <ul>
+                        <li>DAG (Directed Acyclic Graph) is a collection of all the tasks</li>
+                        <li>Reflects the relationships and dependencies between the tasks</li>
+                        <li>Addition of new DAG is very easy.</li>
+                    </ul>
+                     <img alt="dags view UI"  src="./assets/airflow_dag_graph_view.png"/>
+				</section>
+
+                <section>
+                    <h3>Tasks as Operators</h3>
+                    <ul>
+                        <li>BashOperator</li>
+                        <li>PythonOperator</li>
+                        <li>PostgresOperator</li>
+                        <li>MySqlOperator</li>
+                        <li>ExternalTaskSensor</li>
+                        <li>EmailOperator</li>
+                        <li>SlackOperator</li>
+                        <li>And many more...</li>
+                    </ul>
+				</section>
+
+
+				<section>
+                    <h3>Scheduling	the	DAGs</h3>
+                    <p>DAGs can be scheduled to run at certain frequency by providing the parameter schedule interval.</p>
+                    <div>
+                    <ul>
+                        <li>Cron expression</li>
+                    </ul>
+                    </div>
+                    <div><img alt=""  src="./assets/schedule_interval_cron.png" align="middle"/></div>
+                        <div>
+                        <ul>
+                            <li>Python datetime object</li>
+                        </ul>
+                        </div>
+                        <div>
+                        <img alt=""  src="./assets/schedule_interval_datetime.png"/>
+                        </div>
+				</section>
+				<section>
+                    <h3>Executors</h3>
+                    <p>Executor is responsible for execution of the jobs.</p>
+                    <ul>
+                        <li>Sequential (Default)</li>
+                        <li>Local</li>
+                        <li>Celery</li>
+                    </ul>
+				</section>
+
+
+                <section>
+                    <h2> DAG Anatomy</h2>
+                </section>
+
+				<section>
+					<h3>Default Arguments</h3>
+                  <img alt=""  src="./assets/dags_default_args.png" align="middle">
+
+				</section>
+				<section>
+					<h3>Instantiation</h3>
+                    <img alt="" src="./assets/dags_instantiate.png" align="middle">
+				</section>
+
+				<section>
+                    <h3>Tasks</h3>
+                    <img alt=""  src="./assets/dags_tasks.png" align="middle">
+                    <center><img alt=""  src="./assets/airflow_dag_graph_view_flow.png"></center>
+				</section>
+
+
+                <section>
+					<h2>Airflow in practice - case study</h2>
+                    <h3 class="fragment">ETL Pipelines</h3>
+                    <p class="fragment">Download Data</p>
+                    <p class="fragment">&darr;</p>
+                    <p class="fragment">Process</p>
+                    <p class="fragment">&darr;</p>
+                    <p class="fragment">Load</p>
+                    <p class="fragment">&darr;</p>
+                    <p class="fragment">Send Report</p>
+                    <p class="fragment">&#9786;</p>
+				</section>
+
+                <!--<section>
+					<h2>Dynamic pipeline generation</h2>
+                    <span><img alt="" class="fragment" src="./assets/dynamic_pipeline_task.png"  style="float: left; width: 72.9%;"/></span>
+                    <span><img alt="" class="fragment" src="./assets/dynamic_pipeline_task_graph.png" style="float: right; width: 24.1%;"/></span>
+                </section>
+
+                <section>
+					<h2>Data Engineering at Scale</h2>
+                    <h4 class="fragment">Celery Executor</h4>
+				  <ul>
+				    <li class="fragment">Vertical and Horizontal scalable</li>
+                    <li class="fragment">Can be monitored via Flower</li>
+                    <li class="fragment">Support Pools and Queues</li>
+				  </ul>
+                </section> -->
+                <section>
+					<h2>Demo</h2>
+				</section>
+                <section>
+                    <h3>Email</h3>
+                    <img alt="" src="./assets/alert_on_success.png"/>
+                </section>
+            <!--
+                <section>
+                    <h3>DAGs View</h3>
+                    <img alt="" src="./assets/ui_dags_view.png"/>
+                </section>
+                <section>
+                    <h3>Tree View</h3>
+                    <img alt="" src="./assets/ui_tree_view.png"/>
+                </section>
+                <section>
+                    <h3>Graph View</h3>
+                    <img alt="" src="./assets/ui_graph_view.png"/>
+                </section>
+
+                <section>
+                    <h3>Code View</h3>
+                    <img alt="" src="./assets/ui_code_view_1.png"/>
+                </section>
+
+                <section>
+                    <h3>Task Duration</h3>
+                    <img alt="" src="./assets/ui_task_duration_view.png"/>
+                </section>
+
+                <section>
+                    <h3>Gantt View</h3>
+                    <img alt="" src="./assets/ui_gantt_view.png"/>
+                </section>
+                -->
+                <section>
+                    <h2>Who uses Airflow</h2>
+                    <img alt="" class="fragment" src="./assets/companies.png"/>
+                </section>
+
+                <section>
+                    <h2>Resources</h2>
+                    <ul>
+                        <li>Documentation: <a href="https://airflow.incubator.apache.org/">https://airflow.incubator.apache.org/</a></li>
+                        <!-- <li><a href="https://pythonhosted.org/airflow/index.html">Documentation - https://pythonhosted.org/airflow/index.html</a></li> -->
+                        <li>Wiki: <a href="https://cwiki.apache.org/confluence/display/AIRFLOW/Airflow+Home">https://cwiki.apache.org/confluence/display/AIRFLOW/Airflow+Home</a></li>
+                        <li>Gitter: <a href="https://gitter.im/apache/incubator-airflow">https://gitter.im/apache/incubator-airflow</a></li>
+                        <li>Mailing List: <a href="http://mail-archives.apache.org/mod_mbox/incubator-airflow-dev/">http://mail-archives.apache.org/mod_mbox/incubator-airflow-dev/</a></li>
+                    </ul>
+                </section>
+
+				<section>
+					<h1>Thank You!</h1>
+					<h3>Mahendra Yadav</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:mahendra@azrisolutions.com">mahendra@azrisolutions.com</a></li>
+                        <li>Github: <a href="http://github.com/userimack/" target=_blank>http://github.com/userimack/</a></li>
+                        <li>Blog: <a href="https://userimack.wordpress.com/" target=_blank>https://userimack.wordpress.com/</a></li>
+                        <li>Linkedin: <a href="https://www.linkedin.com/in/userimack/" target=_blank>https://www.linkedin.com/in/userimack/</a></li>
+                        <li>Twitter: <a href="https://www.twitter.com/@userimack/" target=_blank>https://www.twitter.com/@userimack/</a></li>
+                        <li>Slides: <a href="https://userimack.github.io/airflow_slides/airflow_slides" target=_blank>https://userimack.github.io/airflow_slides</a></li>
+                    </ul>
+
+				</section>
+			</div>
+		</div>
+        <footer class="azri-logo logo">
+          <a href="http://www.arisolutions.com/"><img src="assets/azri-logo-white.png" alt="azri logo" /></a>
+        </footer>
+        <footer class="custom-logo logo">
+          <a href="https://github.com/apache/incubator-airflow"><img src="assets/airflow_logo.png" alt="airflow logo" /></a>
+          <a href="https://github.com/apache/incubator-airflow"><img src="assets/python-logo.png" alt="python logo" width="80" height="100" /></a>
+        </footer>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
