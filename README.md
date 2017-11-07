@@ -16,7 +16,7 @@ Presentation slides for all keynote speakers, general sessions and workshops pre
 * [Recreational Programming](https://hydpy.github.io/PyConf17Slides/Slides/recreational-programming.pdf) - Anand Chitipothu
 * [My Journey to RDO Community](https://hydpy.github.io/PyConf17Slides/Slides/my-journey-to-rdo-community-by-ChandanKumar612.pdf) - Chandan Kumar
 * [IoT Meets Serverless](https://hydpy.github.io/PyConf17Slides/Slides/iot_meets_serverless.pdf) - Narendran
-* [The Journey to Jarvis v2.0 via Stephanie: Building your very own simple AI](hhttps://hydpy.github.io/PyConf17Slides/Slides/The_Journey_To_Jarvis_v2_0_Ujjwal_Gupta.pdf) - Ujjwal Gupta
+* [The Journey to Jarvis v2.0 via Stephanie: Building your very own simple AI](https://hydpy.github.io/PyConf17Slides/Slides/The_Journey_To_Jarvis_v2_0_Ujjwal_Gupta.pdf) - Ujjwal Gupta
 * [A Lazy Programmers guide to Web Scraping](https://hydpy.github.io/PyConf17Slides/Slides/A_Lazy_Programmers_Guide_to_Web_Scraping.pdf) - Pradhvan Bisht
-* [Airflow: To Manage Data Pipelines](hhttps://hydpy.github.io/PyConf17Slides/Slides/airflow_slides/) - Mahendra Yadav
+* [Airflow: To Manage Data Pipelines](https://hydpy.github.io/PyConf17Slides/Slides/airflow_slides/) - Mahendra Yadav
 
